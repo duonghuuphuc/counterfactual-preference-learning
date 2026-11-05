@@ -1,0 +1,172 @@
+[
+  {
+    "instance_id": "example_A",
+    "opportunity_id": 1,
+    "state": {
+      "total_penalty": 120,
+      "room_capacity_penalty": 45,
+      "minimum_working_days_penalty": 25,
+      "curriculum_compactness_penalty": 40,
+      "room_stability_penalty": 10,
+      "conflict_density": 0.42,
+      "room_utilization": 0.78
+    },
+    "preference_order": [
+      "RoomChange",
+      "MoveLecture",
+      "SwapLectures",
+      "KempeMove",
+      "RuinRecreate"
+    ],
+    "counterfactual_outcomes": [
+      {
+        "operator": "MoveLecture",
+        "feasible": true,
+        "best_delta": -8,
+        "feasible_candidates": 34
+      },
+      {
+        "operator": "SwapLectures",
+        "feasible": true,
+        "best_delta": -5,
+        "feasible_candidates": 22
+      },
+      {
+        "operator": "RoomChange",
+        "feasible": true,
+        "best_delta": -12,
+        "feasible_candidates": 41
+      },
+      {
+        "operator": "KempeMove",
+        "feasible": true,
+        "best_delta": -3,
+        "feasible_candidates": 12
+      },
+      {
+        "operator": "RuinRecreate",
+        "feasible": false,
+        "best_delta": null,
+        "feasible_candidates": 0
+      }
+    ],
+    "statistics": {
+      "candidate_budget_per_operator": 50,
+      "tied_outcome_groups": []
+    }
+  },
+  {
+    "instance_id": "example_B",
+    "opportunity_id": 1,
+    "state": {
+      "total_penalty": 95,
+      "room_capacity_penalty": 35,
+      "minimum_working_days_penalty": 20,
+      "curriculum_compactness_penalty": 32,
+      "room_stability_penalty": 8,
+      "conflict_density": 0.36,
+      "room_utilization": 0.71
+    },
+    "preference_order": [
+      "RoomChange",
+      "SwapLectures",
+      "MoveLecture",
+      "KempeMove",
+      "RuinRecreate"
+    ],
+    "counterfactual_outcomes": [
+      {
+        "operator": "MoveLecture",
+        "feasible": true,
+        "best_delta": -4,
+        "feasible_candidates": 30
+      },
+      {
+        "operator": "SwapLectures",
+        "feasible": true,
+        "best_delta": -6,
+        "feasible_candidates": 28
+      },
+      {
+        "operator": "RoomChange",
+        "feasible": true,
+        "best_delta": -9,
+        "feasible_candidates": 38
+      },
+      {
+        "operator": "KempeMove",
+        "feasible": true,
+        "best_delta": -2,
+        "feasible_candidates": 11
+      },
+      {
+        "operator": "RuinRecreate",
+        "feasible": false,
+        "best_delta": null,
+        "feasible_candidates": 0
+      }
+    ],
+    "statistics": {
+      "candidate_budget_per_operator": 50,
+      "tied_outcome_groups": []
+    }
+  },
+  {
+    "instance_id": "example_A",
+    "opportunity_id": 2,
+    "state": {
+      "total_penalty": 70,
+      "room_capacity_penalty": 10,
+      "minimum_working_days_penalty": 15,
+      "curriculum_compactness_penalty": 36,
+      "room_stability_penalty": 9,
+      "conflict_density": 0.42,
+      "room_utilization": 0.78
+    },
+    "preference_order": [
+      "MoveLecture",
+      "SwapLectures",
+      "RoomChange",
+      "KempeMove",
+      "RuinRecreate"
+    ],
+    "counterfactual_outcomes": [
+      {
+        "operator": "MoveLecture",
+        "feasible": true,
+        "best_delta": -5,
+        "feasible_candidates": 35
+      },
+      {
+        "operator": "SwapLectures",
+        "feasible": true,
+        "best_delta": -5,
+        "feasible_candidates": 27
+      },
+      {
+        "operator": "RoomChange",
+        "feasible": true,
+        "best_delta": -1,
+        "feasible_candidates": 40
+      },
+      {
+        "operator": "KempeMove",
+        "feasible": true,
+        "best_delta": 0,
+        "feasible_candidates": 13
+      },
+      {
+        "operator": "RuinRecreate",
+        "feasible": false,
+        "best_delta": null,
+        "feasible_candidates": 0
+      }
+    ],
+    "statistics": {
+      "candidate_budget_per_operator": 50,
+      "tied_outcome_groups": [
+        ["MoveLecture", "SwapLectures"]
+      ]
+    }
+  }
+]

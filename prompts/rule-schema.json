@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CPL Symbolic Search-Control Skill",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "rules",
+    "default_ordering"
+  ],
+  "properties": {
+    "rules": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "conditions",
+          "ordering"
+        ],
+        "properties": {
+          "conditions": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 3,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "feature",
+                "operator",
+                "value"
+              ],
+              "properties": {
+                "feature": {
+                  "enum": [
+                    "total_penalty",
+                    "room_capacity_penalty",
+                    "minimum_working_days_penalty",
+                    "curriculum_compactness_penalty",
+                    "room_stability_penalty",
+                    "conflict_density",
+                    "room_utilization"
+                  ]
+                },
+                "operator": {
+                  "enum": [
+                    ">",
+                    ">=",
+                    "<",
+                    "<="
+                  ]
+                },
+                "value": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "ordering": {
+            "$ref": "#/$defs/operatorOrdering"
+          }
+        }
+      }
+    },
+    "default_ordering": {
+      "$ref": "#/$defs/operatorOrdering"
+    }
+  },
+  "$defs": {
+    "operatorOrdering": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "MoveLecture",
+          "SwapLectures",
+          "RoomChange",
+          "KempeMove",
+          "RuinRecreate"
+        ]
+      }
+    }
+  }
+}

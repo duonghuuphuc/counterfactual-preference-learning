@@ -1,0 +1,10 @@
+{
+  "rules": [],
+  "default_ordering": [
+    "MoveLecture",
+    "SwapLectures",
+    "RoomChange",
+    "KempeMove",
+    "RuinRecreate"
+  ]
+}
